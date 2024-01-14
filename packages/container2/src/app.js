@@ -44,7 +44,7 @@ import {
 
 import Header from './components/Header';
 
-const MarketingLazy = lazy(() => import('./components/MarketingApp'));
+const MarketingLazy = lazy(() => import('./components/marketingApp'));
 // const AuthLazy = lazy(() => import('./components/AuthApp'));
 
 const generateClassName = createGenerateClassName({
