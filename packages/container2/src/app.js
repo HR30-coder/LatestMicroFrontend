@@ -59,7 +59,7 @@ export default () => {
       <StylesProvider generateClassName={generateClassName}>
         <div>
           <Header onSignOut={() => { setSignedIn(false); }} signedIn={isSignedIn} />
-          <Suspense fallback={<div>Loading....</div>}>
+          <Suspense fallback={<div>XTYCY....</div>}>
             <Switch>
               {/* <Route path="/auth" >
                 <AuthLazy onSignIn={() => { setSignedIn(true) }}/>
