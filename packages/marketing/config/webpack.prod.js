@@ -3,10 +3,10 @@ const commonConfig = require("./webpack.common");
 const packageJSON = require("../package.json");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
-const prodConfig = {
+const devConfig = {
     mode: "production",
     output: {
-        filename: '[name].[contenthash].js'
+        filename : '[name].[contenthash].js'
     },
     plugins: [
         new ModuleFederationPlugin({
@@ -20,4 +20,4 @@ const prodConfig = {
     ]
 };
 
-module.exports = merge(commonConfig, prodConfig); //merge has devConfig as the 2nd arg means devConfig overridesthe prodConfig
+module.exports = merge(commonConfig, devConfig); //merge has devConfig as the 2nd arg means devConfig overridesthe prodConfig
