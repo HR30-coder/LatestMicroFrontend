@@ -1,6 +1,6 @@
-import React    from "react";
-import { Switch, Route, Router ,BrowserRouter} from "react-router-dom";
-import { StylesProvider , createGenerateClassName } from "@material-ui/core/styles";
+import React from "react";
+import { Switch, Route, Router, BrowserRouter } from "react-router-dom";
+import { StylesProvider, createGenerateClassName } from "@material-ui/core/styles";
 import Landing from "./components/Landing";
 import Pricing from "./components/Pricing";
 import "../public/app.css";
@@ -9,7 +9,8 @@ import "../public/app.css";
 //     productionPrefix: "mk"
 // })
 
-export default ({history}) => {
+export default ({ history }) => {
+    //simulating a change on this repo
     return <div className="marketing">
         <h2 className="this">THIS FROM MARKETING</h2>
         <StylesProvider>
