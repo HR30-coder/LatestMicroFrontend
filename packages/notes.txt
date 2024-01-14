@@ -1,0 +1,31 @@
+babel is configured in our project as a transpiling bundler 
+it converts the syntax sugar code into normal es5 code
+
+when using merge the second arg overrides the common configs
+
+CSS in microfrontend :-
+
+css in microfrontending should be scoped like the the all the styel selector should be scoped within the id or class of the most parent element of the microfrontending
+material UI uses css in js and prfix injection in production mode to actually scope the css
+
+Routing in microfrontend :-
+
+Routing has to be implemented in both container and children
+Routing frameworks can be anything across the children and container 
+Microapps in isolation should also be able to run the Routing
+routing soln should be done using standard framework like angular router,react router etc
+multiple microfrontneds can be visible at the same time 
+state sharing between these different frameworkds should be as general as possible 
+
+Routing has 2 objects :-
+history = url (browser history state of path in adress bar (everything after domain) and memeory history (actual history stored in the memory or program))
+router = space where the contents will be rendered or components will be rendered
+
+Usual routing solution :-
+
+* container (Browser history)  ---> child apps (memory history)
+
+
+* Public paths ==> so when we add public paths we are telling our browser where to load the bndle or main.js from and similarly to the remote entry
+  as remote entry needs to know the location of the file it has to fetch
+* It is preferred to give the full path with domain in the public path 
