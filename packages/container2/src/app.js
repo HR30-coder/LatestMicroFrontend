@@ -45,7 +45,7 @@ import {
 import Header from './components/Header';
 
 const MarketingLazy = lazy(() => import('./components/marketingApp'));
-// const AuthLazy = lazy(() => import('./components/AuthApp'));
+const AuthLazy = lazy(() => import('./components/authApp'));
 
 const generateClassName = createGenerateClassName({
   productionPrefix: 'co',
@@ -62,9 +62,9 @@ export default () => {
           <Header onSignOut={() => { setSignedIn(false); }} signedIn={isSignedIn} />
           <Suspense fallback={<div>Loading....</div>}>
             <Switch>
-              {/* <Route path="/auth" >
+              <Route path="/auth" >
                 <AuthLazy onSignIn={() => { setSignedIn(true) }}/>
-              </Route> */}
+              </Route>
               {/* to trigger the workflow */}
               <Route path="/" >
                 <MarketingLazy/>

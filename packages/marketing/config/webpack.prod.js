@@ -3,11 +3,13 @@ const commonConfig = require("./webpack.common");
 const packageJSON = require("../package.json");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
+const domain = process.env.PRODUCTION_DOMAIN;
+
 const devConfig = {
     mode: "production",
     output: {
         filename: '[name].[contenthash].js',
-        publicPath: '/marketing/latest/'
+        publicPath: `${domain}/marketing/latest/`
     },
     plugins: [
         new ModuleFederationPlugin({
